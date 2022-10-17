@@ -37,16 +37,7 @@ public:
         nextIndex++;
     }
 
-    int pop()
-    {
-        if (isEmpty())
-        {
-            cout << "Stack is Empty";
-            return INT_MIN;
-        }
-        nextIndex--;
-        return data[nextIndex];
-    }
+   //insert pop here
     int top()
     {
         if (isEmpty())
