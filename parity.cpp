@@ -36,8 +36,17 @@ public:
         data[nextIndex] = ele;
         nextIndex++;
     }
-
-   //insert pop here
+    int pop()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is Empty";
+            return INT_MIN;
+        }
+        nextIndex--;
+        return data[nextIndex];
+    }
+    
     int top()
     {
         if (isEmpty())
