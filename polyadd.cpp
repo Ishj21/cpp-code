@@ -108,12 +108,14 @@ int main()
 
 	// Create first list of 5x^2 + 4x^1 + 2x^0
 	//insert nodes here
-
+        
 	// Create second list of -5x^1 - 5x^0
 	createNode(1, 2, &poly2);
 	createNode(-2, 1, &poly2);
 	createNode(-4, 0, &poly2);
-
+        createNode(3, 2, &poly1);
+	createNode(6, 1, &poly1);
+	createNode(6, 0, &poly1);
 
 
 	printf("First Number: ");
