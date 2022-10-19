@@ -1,48 +1,39 @@
-#include <iostream>  
-using namespace std;  
-int main()  
-{  
-int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;    
-cout<<"enter the number of row=";    
-cin>>r;    
-cout<<"enter the number of column=";    
-cin>>c;    
-cout<<"enter the first matrix element=\n";    
-for(i=0;i<r;i++)    
-{    
-for(j=0;j<c;j++)    
-{    
-cin>>a[i][j];  
-}    
-}    
-cout<<"enter the second matrix element=\n";    
-for(i=0;i<r;i++)    
-{    
-for(j=0;j<c;j++)    
-{    
-cin>>b[i][j];    
-}    
-}    
-cout<<"multiply of the matrix=\n";    
-for(i=0;i<r;i++)    
-{    
-for(j=0;j<c;j++)    
-{    
-mul[i][j]=0;    
-for(k=0;k<c;k++)    
-{    
-mul[i][j]+=a[i][k]*b[k][j];    
-}    
-}    
-}    
-//for printing result    
-for(i=0;i<r;i++)    
-{    
-for(j=0;j<c;j++)    
-{    
-cout<<mul[i][j]<<" ";    
-}    
-cout<<"\n";    
-}    
-return 0;  
+#include <iostream>
+
+using namespace std;
+int main() {
+  int first_matrix[10][10], second_matrix[10][10], result_matrix[10][10], row, column, i, j, k;
+  cout << "enter the number of row = ";
+  cin >> row;
+  cout << "enter the number of column = ";
+  cin >> column;
+  cout << "enter the first matrix element =\n";
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      cin >> first_matrix[i][j];
+    }
+  }
+  cout << "enter the second matrix element = \n";
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      cin >> second_matrix[i][j];
+    }
+  }
+  cout << "multiply of the matrix = \n";
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      result_matrix[i][j] = 0;
+      for (k = 0; k < column; k++) {
+        result_matrix[i][j] += first_matrix[i][k] * second_matrix[k][j];
+      }
+    }
+  }
+  //for printing result    
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      cout << result_matrix[i][j] << " ";
+    }
+    cout << "\n";
+  }
+  return 0;
 }
