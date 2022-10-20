@@ -116,7 +116,7 @@ int main()
         createNode(3, 2, &poly1);
 	createNode(6, 1, &poly1);
 	createNode(6, 0, &poly1);
-
+        createNode(3, 3, &poly1);
 
 	printf("First Number: ");
 	show(poly1);
